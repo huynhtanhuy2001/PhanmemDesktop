@@ -81,5 +81,17 @@ namespace PhanmemDesktop
          
             
         }
+
+        private void trangChuForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+          DialogResult closeTC =  MessageBox.Show("Bạn Có Muốn Thoát không?","Hỏi Thoát",MessageBoxButtons.OKCancel,MessageBoxIcon.Exclamation);
+            if(closeTC == DialogResult.OK)
+            {
+                e.Cancel = false;
+            }else
+                e.Cancel=true;
+
+                
+        }
     }
 }
